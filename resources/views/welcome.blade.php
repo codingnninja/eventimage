@@ -147,6 +147,14 @@
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=144093459412687&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -188,20 +196,22 @@
   </form>
   @else
    <div class="container-fluid">
-    <img src="images/{{$url}}" style="max-height:500px;">
+    <img src="images/{{$url}}" class="img-fluid" style="max-width:500px;">
     <br>
     <a class="btn btn-danger" href="images/{{$url}}" download>Click to download</a>
+    <br><br>
+    <div class="fb-like" data-href="https://www.facebook.com/motutordotcom" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
    </div>
 @endif
 
 </div>
-
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
   <p></p>
+
 </footer>
 </body>
 </html>
