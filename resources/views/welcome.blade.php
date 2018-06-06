@@ -188,7 +188,7 @@
   </form>
   @else
    <div class="container-fluid">
-    <img src="images/{{$url}}">
+    <img src="images/{{$url}}" style="max-height:500px;">
     <br>
     <a class="btn btn-danger" href="images/{{$url}}" download>Click to download</a>
    </div>
