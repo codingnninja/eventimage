@@ -1,0 +1,12 @@
+{
+    "name": "s/eventimage",
+    "description": "Generate images for people about your event for them to promote it with the image",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ogundiran Ayobami",
+            "email": "ayobami_ogundiran@yahoo.com"
+        }
+    ],
+    "require": {}
+}
