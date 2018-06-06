@@ -20,7 +20,9 @@ class EventImageBuilderController extends Controller
 
     	$random = time();
 	    $img = \Image::make('images/pgmc.png');
-	    $insert = \Image::make($file)->resize(202,196);
+	    $insert = \Image::make($file)->fit(202,196, function ($constraint) {
+		    $constraint->upsize();
+		}, 'top');
 	    $img->insert($insert, 'top-left', 21,37);
 	    $img->save('images/'.$random.'.jpg');
 	    return view('welcome', ['url' => $random.'.jpg', 'tagline' => $this->tagline]);
