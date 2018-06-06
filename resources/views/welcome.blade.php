@@ -123,12 +123,7 @@
   .navbar-default .navbar-toggle {
       border-color: transparent;
       color: #fff !important;
-  }
-  footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #f4511e;
-  }
+}
   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
@@ -196,11 +191,11 @@
   </form>
   @else
    <div class="container-fluid">
-    <img src="images/{{$url}}" class="img-fluid" style="max-width:500px;">
+    <img src="images/{{$url}}" class="img-responsive">
     <br>
     <a class="btn btn-danger" href="images/{{$url}}" download>Click to download</a>
     <br><br>
-    <div class="fb-like" data-href="https://www.facebook.com/motutordotcom" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>Click like to appreciate our efforts.
+    <div class="fb-like" data-href="https://www.facebook.com/motutordotcom" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div><br>Click like to appreciate our efforts.
    </div>
 @endif
 
