@@ -200,7 +200,7 @@
     <br>
     <a class="btn btn-danger" href="images/{{$url}}" download>Click to download</a>
     <br><br>
-    <div class="fb-like" data-href="https://www.facebook.com/motutordotcom" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://www.facebook.com/motutordotcom" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>Click like to appreciate our efforts.
    </div>
 @endif
 
