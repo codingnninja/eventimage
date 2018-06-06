@@ -8,7 +8,7 @@ class EventImageBuilderController extends Controller
 {
 	protected $tagline;
     public function index (Request $request) {
-    	$this->tagline = 'Create your platinum reasoning contest participants image.';
+    	$this->tagline = 'Create your platinum reasoning contest participants\' image.';
     	return view('welcome', ['url' => null, 'tagline' => $this->tagline]);
     }
 
