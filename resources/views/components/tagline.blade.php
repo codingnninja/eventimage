@@ -2,11 +2,11 @@
 <div id="videoDiv"> 
 <img src="{{asset('images/bg3.jpg')}}" id="videosubstitute" alt="">
 <br>
-
+ 
 	<div id="videoBlock">   
 		<video poster="{{asset('images/bg3.jpg')}}" preload id="video" autoplay muted loop controls>
 			<!-- <source src="video/t12.webm" type="video/webm"></source> -->
-			<source src="{{asset('video/a.mp4')}}" type="video/mp4"></source>
+			<source src="{{asset('video/hero.mp4')}}" type="video/mp4"></source>
 		</video> 
 		<div id="videoMessageBox">
 			<div id="videoMessage">
