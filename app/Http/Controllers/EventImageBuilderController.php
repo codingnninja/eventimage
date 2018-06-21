@@ -45,9 +45,8 @@ class EventImageBuilderController extends Controller
         }
         
         if ($this->template === "no") {
-            return var_dump('Is working');
-            $backgroundImg = $this->imageUrl.$request->event_name.".jpg";
 
+            $backgroundImg = $this->imageUrl.$request->event_name.".jpg";
             $width_height = explode("_", $request->website);
             $this->result = $this->
                                 customized(
@@ -58,6 +57,7 @@ class EventImageBuilderController extends Controller
                                 );
 
             $imagePath = $this->imageUrl.$this->result.".jpg";
+            return var_dump($imagePath);
         }
 
         $this->tagline = 'Your identification image has been created successfully.';
@@ -78,7 +78,7 @@ class EventImageBuilderController extends Controller
     }
 
     public function setAsBackground ($path) {
-        return \Image::make("{$path}");
+        return \Image::make($path);
     }
 
     public function cropProfileImage ($file_path,$w = 202, $h = 196) {
@@ -88,7 +88,7 @@ class EventImageBuilderController extends Controller
     }
 
     public function getRandomImagePath ($randomNum) {
-        $paths = ['newstand.png', 'pgmc2.png', 'pgmc.png'];
+        $paths = ['newstand.png'];
         return "images/".$paths[$randomNum];
     }
 
