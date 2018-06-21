@@ -11,5 +11,14 @@
 |
 */
 
-Route::get('/', 'EventImageBuilderController@index')->name('builder');
+Route::get('/', 'EventImageBuilderController@index')->name('home');
+Route::get('/customize','EventImageBuilderController@customize')->name('customize');
+Route::post('/processCustomize','EventImageBuilderController@processCustomize')->name('processCustomize');
+Route::get('/template', 'EventImageBuilderController@template')->name('template');
+Route::post('/processTemplate', 'EventImageBuilderController@processTemplate')->name('processTemplate');
+Route::get('/result', 'EventImageBuilderController@result')->name('result');
+
+Route::get('/ext-user/{website}/{ename}/{template}', 'EventImageBuilderController@externerUser')->name('ext-user');
+
 Route::post('/create', 'EventImageBuilderController@create')->name('create');
+

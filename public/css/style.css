@@ -1,0 +1,259 @@
+body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-family: Montserrat, sans-serif;
+      border-bottom-right-radius: 500px;
+      border-bottom-left-radius: 500px;
+  }
+
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #389 !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #333;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+}
+
+.tagline {
+  margin-top:150px;
+  justify-content: center;
+}
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+
+#drag-1, #drag-2 {
+  width: 202px;
+  height: 196px;
+  background-color: #29e;
+  color: white;
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+#drag-me::before {
+  content: "#" attr(id);
+  font-weight: bold;
+}
+
+.resize-container {
+  background-color: red;
+  display: inline-block;
+  width: 490px;
+  height: 292px;
+  background-repeat: no-repeat;
+}
+
+/* Default hide the video on all devices */
+#video{display:none}
+/* Default display the image to replace the video on all devices */
+#videosubstitute{display:block;width:100%;height:auto;max-width:100%}
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width : 992px) {
+#video{display:block;}
+#videosubstitute{display:none;}
+}
+
+@media only screen and (max-width : 992px) {
+#videoMessage { margin-top: 2.4em; font-size: 0.8em; }
+#videosubstitute { margin-top: 50px; }
+}
+
+#videoDiv {width: 100%; max-width:992px; margin:auto; display:block;position: relative; margin-bottom: 20px;}
+#video{width: 100%; }
+#videoMessage {padding:0.4em;}
+#videoMessage {text-shadow: 2px 2px 2px #000000;color:white;z-index:99 }
+#videoMessage h1{font-size: 3em;color:#ffffff;text-align:center;margin:0.25em;}
+#videoMessage h2{font-size: 1.5em;color:#ffffff;text-align:center;margin: 0.25em;}
+#videoMessage h3{font-size: 1.3em;color:#ffffff;text-align:center;margin: 0.25em;}
+.videoClick {text-align:center}
+
+#videoMessageBox {
+    position: absolute;  top: 0;  left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+}
+
+#videoMessage {
+     -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+}
+/* 
+#video{display:none}
+
+/* Default to display the image on all devices 
+#videosubstitute{display:block;width:auto;height:100%;}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+#fullScreenDiv{
+    width:100%;
+    min-height: 100%; 
+   /* Set the height to match that of the viewport. *
+    height: 100vh;
+    width: auto;
+    padding:0!important;
+    margin: 0!important;
+    background-color: gray;
+    position: relative;
+}
+#video{    
+    width: 100vw; 
+    height: auto;
+    object-fit: cover;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #video{
+    height: 150%;
+    top: -100%;
+  }
+  #videosubstitute{
+    display:block;
+    width: 100%;
+    height: auto;}
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #video {
+    width: 150%;
+    left: -100%;
+  }
+  #videosubstitute{display:block;width:auto;height:100%;}
+}
+/*if there is 992  pixels or more, then display the video but hide the image*
+@media only screen and (min-width : 992px) {
+#video{display:block;}
+#videosubstitute{display:none}
+}   
+
+/* The container for our text and stuff *
+#messageBox{
+    position: absolute;  top: 0;  left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+}
+*/
