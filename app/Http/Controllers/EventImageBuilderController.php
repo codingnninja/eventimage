@@ -47,6 +47,7 @@ class EventImageBuilderController extends Controller
         if ($this->template === "no") {
 
             $backgroundImg = $this->imageUrl.$request->event_name.".jpg";
+            return var_dump($backgroundImg);
             $width_height = explode("_", $request->website);
             $this->result = $this->
                                 customized(
@@ -57,7 +58,6 @@ class EventImageBuilderController extends Controller
                                 );
 
             $imagePath = $this->imageUrl.$this->result.".jpg";
-            return var_dump($imagePath);
         }
 
         $this->tagline = 'Your identification image has been created successfully.';
