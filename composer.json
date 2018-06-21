@@ -5,12 +5,12 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "7.1.9",
+        "php": "^7.1.9",
         "cloudinary/cloudinary_php": "^1.10",
         "fideloper/proxy": "^4.0",
         "intervention/image": "^2.4",
         "intervention/imagecache": "^2.3",
-        "laravel/framework": "5.6.*",
+        "laravel/framework": "5.6",
         "laravel/tinker": "^1.0",
         "ext-gd": "*"
     },
