@@ -45,6 +45,7 @@ class EventImageBuilderController extends Controller
         }
         
         if ($this->template === "no") {
+            return var_dump('Is working');
             $backgroundImg = $this->imageUrl.$request->event_name.".jpg";
 
             $width_height = explode("_", $request->website);
