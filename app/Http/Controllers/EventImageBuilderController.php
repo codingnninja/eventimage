@@ -203,7 +203,7 @@ class EventImageBuilderController extends Controller
     }
 
     public function externerUser (Request $request, $website, $ename, $template) {
-        $this->tagline = "Create an event image for {$ename}";
+        $this->tagline = "Create a social image for your events.";
         return view('pages.owner', ['ename' => $ename, 'website' => $website, 'tagline' => $this->tagline, 'template' => $template]);
     }
 
