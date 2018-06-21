@@ -47,7 +47,6 @@ class EventImageBuilderController extends Controller
         if ($this->template === "no") {
 
             $backgroundImg = $this->imageUrl.$request->event_name.".jpg";
-            return var_dump($backgroundImg);
             $width_height = explode("_", $request->website);
             $this->result = $this->
                                 customized(
@@ -58,6 +57,7 @@ class EventImageBuilderController extends Controller
                                 );
 
             $imagePath = $this->imageUrl.$this->result.".jpg";
+            return var_dump($imagePath);
         }
 
         $this->tagline = 'Your identification image has been created successfully.';
@@ -74,6 +74,7 @@ class EventImageBuilderController extends Controller
     public function customized ($backgroundImg, $foregroundImg, $x_offset, $y_offset){
         $image = $this->
                     combineImages($backgroundImg, $foregroundImg, $x_offset, $y_offset);
+                    return $image;
         return $this->save($image);
     }
 
@@ -93,6 +94,7 @@ class EventImageBuilderController extends Controller
     }
 
     public function combineImages ($backgroundImg = null, $foregroundImg = null, $x_offset = 21, $y_offset = 37) {
+        return var_dump($backgroundImg);
         $background = $this->setAsBackground($backgroundImg);
         $foreground = $this->cropProfileImage($foregroundImg);
         $initialPosition = 'top-left';
