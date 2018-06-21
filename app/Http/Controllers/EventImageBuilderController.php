@@ -94,7 +94,7 @@ class EventImageBuilderController extends Controller
     }
 
     public function combineImages ($backgroundImg, $foregroundImg, $x_offset = 21, $y_offset = 37) {
-        $background = $this->setAsBackground("images/newstand.png");
+        $background = $this->setAsBackground($backgroundImg);
         return $background;
         $foreground = $this->cropProfileImage($foregroundImg);
         $initialPosition = 'top-left';
