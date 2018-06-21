@@ -55,9 +55,8 @@ class EventImageBuilderController extends Controller
                                     $width_height[0],
                                     $width_height[1]
                                 );
-
             $imagePath = $this->imageUrl.$this->result.".jpg";
-            return var_dump($imagePath);
+            return $imagePath;
         }
 
         $this->tagline = 'Your identification image has been created successfully.';
@@ -74,18 +73,19 @@ class EventImageBuilderController extends Controller
     public function customized ($backgroundImg, $foregroundImg, $x_offset, $y_offset){
         $image = $this->
                     combineImages($backgroundImg, $foregroundImg, $x_offset, $y_offset);
-                    return $image;
         return $this->save($image);
     }
 
     public function setAsBackground ($path) {
-        return \Image::make($path);
+        $background = \Image::make($path);
+        return $background;
     }
 
     public function cropProfileImage ($file_path,$w = 202, $h = 196) {
-        return \Image::make($file_path)->fit($w,$h, function ($constraint) {
+        $croppedImg = \Image::make($file_path)->fit($w,$h, function ($constraint) {
             $constraint->upsize();
         }, 'top');
+        return $croppedImg;
     }
 
     public function getRandomImagePath ($randomNum) {
@@ -93,9 +93,9 @@ class EventImageBuilderController extends Controller
         return "images/".$paths[$randomNum];
     }
 
-    public function combineImages ($backgroundImg = null, $foregroundImg = null, $x_offset = 21, $y_offset = 37) {
-        return var_dump($backgroundImg);
-        $background = $this->setAsBackground($backgroundImg);
+    public function combineImages ($backgroundImg, $foregroundImg, $x_offset = 21, $y_offset = 37) {
+        $background = $this->setAsBackground("images/newstand.png");
+        return $background;
         $foreground = $this->cropProfileImage($foregroundImg);
         $initialPosition = 'top-left';
         if ($this->template === "no") { 
