@@ -9,11 +9,14 @@
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <meta property="og:url" content="eventimage.herokuapp.com" />
+  
+  <!-- <meta property="og:url" content="https://eventimage.herokuapp.com" /> 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Make social images for your events" />
   <meta property="og:description" content="We make socializing around event easier and fun for you." />
   <meta property="og:image" content="https://res.cloudinary.com/nyscapp/image/upload/v1529219926/mdjzjf5betlkjfdwwfua.jpg" />
+-->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <!-- Styles -->
   <script src="{{ asset('js/interact.js')}}"></script>
