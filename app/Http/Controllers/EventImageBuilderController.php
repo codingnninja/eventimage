@@ -173,11 +173,11 @@ class EventImageBuilderController extends Controller
     public function sendToCloudinary ($path){
        
         \Cloudinary::config(array(
-            "cloud_name" => env('CLOUDINARY_NAME'),
-            "api_key" => env('CLOUDINARY_API_KEY'),
-            "api_secret" => env('CLOUDINARY_API_SECRET')
+            "cloud_name" => "nyscapp",
+            "api_key" => "219381786589187",
+            "api_secret" => "4OoezCZzOldZsWtJv84J8B5PiGU"
         ));
-        
+
         $result = \Cloudinary\Uploader::upload($path, array("flags" => "attachment"));
         return $result['public_id'];
     }
