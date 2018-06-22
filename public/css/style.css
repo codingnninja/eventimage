@@ -152,6 +152,8 @@ body {
 @media only screen and (min-width : 992px) {
 #video{display:block;}
 #videosubstitute{display:none;}
+#videoMessage { font-size: 1.2em !important; }
+
 }
 
 @media only screen and (max-width : 992px) {
@@ -163,7 +165,7 @@ body {
 #video{width: 100%; }
 #videoMessage {padding:0.4em;}
 #videoMessage {text-shadow: 2px 2px 2px #000000;color:white;z-index:99 }
-#videoMessage h1{font-size: 3em;color:#ffffff;text-align:center;margin:0.25em;}
+#videoMessage h1{font-size: 2.4em;color:#ffffff;text-align:center;margin:0.25em;}
 #videoMessage h2{font-size: 1.5em;color:#ffffff;text-align:center;margin: 0.25em;}
 #videoMessage h3{font-size: 1.3em;color:#ffffff;text-align:center;margin: 0.25em;}
 .videoClick {text-align:center}
